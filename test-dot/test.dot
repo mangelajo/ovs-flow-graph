@@ -5,88 +5,88 @@ digraph G{ rankdir = LR;
   label = <<table border="0" cellspacing="0">
    <tr><td port="header" border="1" colspan="5" bgcolor="red">TABLE 0</td></tr>
    <tr>
-    <td>in</td>
-    <td>packets</td>
-    <td>bytes</td>
-    <td>idle</td>
-    <td>actions</td>
+    <td border="1">in</td>
+    <td border="1">packets</td>
+    <td border="1">bytes</td>
+    <td border="1">idle</td>
+    <td border="1">actions</td>
    </tr>
    <tr>
-    <td>port:3</td>
-    <td>2222</td>
-    <td>245928</td>
-    <td>23</td>
-    <td port="rule0"> resubmit, </td>
+    <td border="1">port:3</td>
+    <td border="1">2222</td>
+    <td border="1">245928</td>
+    <td border="1">23</td>
+    <td port="rule0" border="1"> resubmit, </td>
    </tr>
    <tr>
-    <td>port:7</td>
-    <td>3176262</td>
-    <td>256409657</td>
-    <td>0</td>
-    <td port="rule1"> resubmit, </td>
+    <td border="1">port:7</td>
+    <td border="1">3176262</td>
+    <td border="1">256409657</td>
+    <td border="1">0</td>
+    <td port="rule1" border="1"> resubmit, </td>
    </tr>
    <tr>
-    <td>port:8</td>
-    <td>3112144</td>
-    <td>251819494</td>
-    <td>0</td>
-    <td port="rule2"> resubmit, </td>
+    <td border="1">port:8</td>
+    <td border="1">3112144</td>
+    <td border="1">251819494</td>
+    <td border="1">0</td>
+    <td port="rule2" border="1"> resubmit, </td>
    </tr>
    <tr>
-    <td>port:1</td>
-    <td>5490096</td>
-    <td>38308835961</td>
-    <td>0</td>
-    <td port="rule3"> resubmit, </td>
+    <td border="1">port:1</td>
+    <td border="1">5490096</td>
+    <td border="1">38308835961</td>
+    <td border="1">0</td>
+    <td port="rule3" border="1"> resubmit, </td>
    </tr>
    <tr>
-    <td>port:9</td>
-    <td>2388162</td>
-    <td>194765487</td>
-    <td>565</td>
-    <td port="rule4"> resubmit, </td>
+    <td border="1">port:9</td>
+    <td border="1">2388162</td>
+    <td border="1">194765487</td>
+    <td border="1">565</td>
+    <td port="rule4" border="1"> resubmit, </td>
    </tr>
    <tr>
-    <td>port:10</td>
-    <td>2347360</td>
-    <td>191341356</td>
-    <td>0</td>
-    <td port="rule5"> resubmit, </td>
+    <td border="1">port:10</td>
+    <td border="1">2347360</td>
+    <td border="1">191341356</td>
+    <td border="1">0</td>
+    <td port="rule5" border="1"> resubmit, </td>
    </tr>
    <tr>
-    <td>port:5</td>
-    <td>0</td>
-    <td>0</td>
-    <td>25867</td>
-    <td port="rule6"> resubmit, </td>
+    <td border="1">port:5</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">25867</td>
+    <td port="rule6" border="1"> resubmit, </td>
    </tr>
    <tr>
-    <td>port:6</td>
-    <td>607764</td>
-    <td>49957951</td>
-    <td>11</td>
-    <td port="rule7"> resubmit, </td>
+    <td border="1">port:6</td>
+    <td border="1">607764</td>
+    <td border="1">49957951</td>
+    <td border="1">11</td>
+    <td port="rule7" border="1"> resubmit, </td>
    </tr>
    <tr>
-    <td>port:2</td>
-    <td>1485</td>
-    <td>173670</td>
-    <td>6634</td>
-    <td port="rule8"> resubmit, </td>
+    <td border="1">port:2</td>
+    <td border="1">1485</td>
+    <td border="1">173670</td>
+    <td border="1">6634</td>
+    <td port="rule8" border="1"> resubmit, </td>
    </tr>
    <tr>
-    <td>port:4</td>
-    <td>4218</td>
-    <td>527786</td>
-    <td>27</td>
-    <td port="rule9"> resubmit, </td>
+    <td border="1">port:4</td>
+    <td border="1">4218</td>
+    <td border="1">527786</td>
+    <td border="1">27</td>
+    <td port="rule9" border="1"> resubmit, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>6</td>
-    <td>384</td>
-    <td>25974</td>
-    <td port="rule10"> drop, </td>
+    <td border="1"></td>
+    <td border="1">6</td>
+    <td border="1">384</td>
+    <td border="1">25974</td>
+    <td port="rule10" border="1"> drop, </td>
    </tr>
     </table>>
   ]
@@ -96,25 +96,25 @@ digraph G{ rankdir = LR;
   label = <<table border="0" cellspacing="0">
    <tr><td port="header" border="1" colspan="5" bgcolor="red">TABLE 1</td></tr>
    <tr>
-    <td>in</td>
-    <td>packets</td>
-    <td>bytes</td>
-    <td>idle</td>
-    <td>actions</td>
+    <td border="1">in</td>
+    <td border="1">packets</td>
+    <td border="1">bytes</td>
+    <td border="1">idle</td>
+    <td border="1">actions</td>
    </tr>
    <tr>
-    <td></td>
-    <td>5480460</td>
-    <td>38308418433</td>
-    <td>0</td>
-    <td port="rule0"> resubmit, </td>
+    <td border="1"></td>
+    <td border="1">5480460</td>
+    <td border="1">38308418433</td>
+    <td border="1">0</td>
+    <td port="rule0" border="1"> resubmit, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>9633</td>
-    <td>415990</td>
-    <td>16</td>
-    <td port="rule1"> resubmit, </td>
+    <td border="1"></td>
+    <td border="1">9633</td>
+    <td border="1">415990</td>
+    <td border="1">16</td>
+    <td port="rule1" border="1"> resubmit, </td>
    </tr>
     </table>>
   ]
@@ -124,228 +124,228 @@ digraph G{ rankdir = LR;
   label = <<table border="0" cellspacing="0">
    <tr><td port="header" border="1" colspan="5" bgcolor="red">TABLE 2</td></tr>
    <tr>
-    <td>in</td>
-    <td>packets</td>
-    <td>bytes</td>
-    <td>idle</td>
-    <td>actions</td>
+    <td border="1">in</td>
+    <td border="1">packets</td>
+    <td border="1">bytes</td>
+    <td border="1">idle</td>
+    <td border="1">actions</td>
    </tr>
    <tr>
-    <td>tun:0xd</td>
-    <td>8189</td>
-    <td>997600</td>
-    <td>14</td>
-    <td port="rule0"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0xd</td>
+    <td border="1">8189</td>
+    <td border="1">997600</td>
+    <td border="1">14</td>
+    <td port="rule0" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x10</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26037</td>
-    <td port="rule1"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x10</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26037</td>
+    <td port="rule1" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x14</td>
-    <td>1296</td>
-    <td>330419</td>
-    <td>5</td>
-    <td port="rule2"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x14</td>
+    <td border="1">1296</td>
+    <td border="1">330419</td>
+    <td border="1">5</td>
+    <td port="rule2" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x20</td>
-    <td>4193</td>
-    <td>545332</td>
-    <td>7</td>
-    <td port="rule3"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x20</td>
+    <td border="1">4193</td>
+    <td border="1">545332</td>
+    <td border="1">7</td>
+    <td port="rule3" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0xa</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26036</td>
-    <td port="rule4"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0xa</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26036</td>
+    <td port="rule4" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x1c</td>
-    <td>4006</td>
-    <td>406160</td>
-    <td>0</td>
-    <td port="rule5"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x1c</td>
+    <td border="1">4006</td>
+    <td border="1">406160</td>
+    <td border="1">0</td>
+    <td port="rule5" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x2</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26040</td>
-    <td port="rule6"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x2</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26040</td>
+    <td port="rule6" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x11</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26036</td>
-    <td port="rule7"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x11</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26036</td>
+    <td port="rule7" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x13</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26033</td>
-    <td port="rule8"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x13</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26033</td>
+    <td port="rule8" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x9</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26029</td>
-    <td port="rule9"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x9</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26029</td>
+    <td port="rule9" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0xc</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26033</td>
-    <td port="rule10"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0xc</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26033</td>
+    <td port="rule10" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x1e</td>
-    <td>2364</td>
-    <td>261984</td>
-    <td>23</td>
-    <td port="rule11"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x1e</td>
+    <td border="1">2364</td>
+    <td border="1">261984</td>
+    <td border="1">23</td>
+    <td port="rule11" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0xe</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26029</td>
-    <td port="rule12"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0xe</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26029</td>
+    <td port="rule12" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x19</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26044</td>
-    <td port="rule13"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x19</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26044</td>
+    <td port="rule13" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x7</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26027</td>
-    <td port="rule14"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x7</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26027</td>
+    <td port="rule14" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0xb</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26033</td>
-    <td port="rule15"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0xb</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26033</td>
+    <td port="rule15" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x1d</td>
-    <td>7373</td>
-    <td>728166</td>
-    <td>11</td>
-    <td port="rule16"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x1d</td>
+    <td border="1">7373</td>
+    <td border="1">728166</td>
+    <td border="1">11</td>
+    <td port="rule16" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x5</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26044</td>
-    <td port="rule17"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x5</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26044</td>
+    <td port="rule17" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x15</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26033</td>
-    <td port="rule18"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x15</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26033</td>
+    <td port="rule18" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x3</td>
-    <td>12324889</td>
-    <td>1001952307</td>
-    <td>0</td>
-    <td port="rule19"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x3</td>
+    <td border="1">12324889</td>
+    <td border="1">1001952307</td>
+    <td border="1">0</td>
+    <td port="rule19" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x6</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26045</td>
-    <td port="rule20"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x6</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26045</td>
+    <td port="rule20" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x1f</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26037</td>
-    <td port="rule21"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x1f</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26037</td>
+    <td port="rule21" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x1a</td>
-    <td>2385</td>
-    <td>261870</td>
-    <td>21</td>
-    <td port="rule22"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x1a</td>
+    <td border="1">2385</td>
+    <td border="1">261870</td>
+    <td border="1">21</td>
+    <td port="rule22" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x8</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26026</td>
-    <td port="rule23"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x8</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26026</td>
+    <td port="rule23" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x16</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26029</td>
-    <td port="rule24"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x16</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26029</td>
+    <td port="rule24" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x1</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26043</td>
-    <td port="rule25"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x1</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26043</td>
+    <td port="rule25" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x1b</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26040</td>
-    <td port="rule26"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x1b</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26040</td>
+    <td port="rule26" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x4</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26027</td>
-    <td port="rule27"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x4</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26027</td>
+    <td port="rule27" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0x12</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26040</td>
-    <td port="rule28"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0x12</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26040</td>
+    <td port="rule28" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td>tun:0xf</td>
-    <td>0</td>
-    <td>0</td>
-    <td>26039</td>
-    <td port="rule29"> mod_vlan_vid,resubmit, </td>
+    <td border="1">tun:0xf</td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26039</td>
+    <td port="rule29" border="1"> mod_vlan_vid,resubmit, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>11</td>
-    <td>762</td>
-    <td>26013</td>
-    <td port="rule30"> drop, </td>
+    <td border="1"></td>
+    <td border="1">11</td>
+    <td border="1">762</td>
+    <td border="1">26013</td>
+    <td port="rule30" border="1"> drop, </td>
    </tr>
     </table>>
   ]
@@ -355,18 +355,18 @@ digraph G{ rankdir = LR;
   label = <<table border="0" cellspacing="0">
    <tr><td port="header" border="1" colspan="5" bgcolor="red">TABLE 3</td></tr>
    <tr>
-    <td>in</td>
-    <td>packets</td>
-    <td>bytes</td>
-    <td>idle</td>
-    <td>actions</td>
+    <td border="1">in</td>
+    <td border="1">packets</td>
+    <td border="1">bytes</td>
+    <td border="1">idle</td>
+    <td border="1">actions</td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26046</td>
-    <td port="rule0"> drop, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26046</td>
+    <td port="rule0" border="1"> drop, </td>
    </tr>
     </table>>
   ]
@@ -376,18 +376,18 @@ digraph G{ rankdir = LR;
   label = <<table border="0" cellspacing="0">
    <tr><td port="header" border="1" colspan="5" bgcolor="red">TABLE 10</td></tr>
    <tr>
-    <td>in</td>
-    <td>packets</td>
-    <td>bytes</td>
-    <td>idle</td>
-    <td>actions</td>
+    <td border="1">in</td>
+    <td border="1">packets</td>
+    <td border="1">bytes</td>
+    <td border="1">idle</td>
+    <td border="1">actions</td>
    </tr>
    <tr>
-    <td></td>
-    <td>12354695</td>
-    <td>1005483838</td>
-    <td>0</td>
-    <td port="rule0"> learn,,output, </td>
+    <td border="1"></td>
+    <td border="1">12354695</td>
+    <td border="1">1005483838</td>
+    <td border="1">0</td>
+    <td port="rule0" border="1"> learn,,output, </td>
    </tr>
     </table>>
   ]
@@ -397,116 +397,116 @@ digraph G{ rankdir = LR;
   label = <<table border="0" cellspacing="0">
    <tr><td port="header" border="1" colspan="5" bgcolor="red">TABLE 20</td></tr>
    <tr>
-    <td>in</td>
-    <td>packets</td>
-    <td>bytes</td>
-    <td>idle</td>
-    <td>actions</td>
+    <td border="1">in</td>
+    <td border="1">packets</td>
+    <td border="1">bytes</td>
+    <td border="1">idle</td>
+    <td border="1">actions</td>
    </tr>
    <tr>
-    <td></td>
-    <td>1142</td>
-    <td>225252</td>
-    <td>27</td>
-    <td port="rule0"> load,load,output, </td>
+    <td border="1"></td>
+    <td border="1">1142</td>
+    <td border="1">225252</td>
+    <td border="1">27</td>
+    <td port="rule0" border="1"> load,load,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>1100</td>
-    <td>224464</td>
-    <td>42</td>
-    <td port="rule1"> load,load,output, </td>
+    <td border="1"></td>
+    <td border="1">1100</td>
+    <td border="1">224464</td>
+    <td border="1">42</td>
+    <td port="rule1" border="1"> load,load,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>1337</td>
-    <td>233364</td>
-    <td>1</td>
-    <td port="rule2"> load,load,output, </td>
+    <td border="1"></td>
+    <td border="1">1337</td>
+    <td border="1">233364</td>
+    <td border="1">1</td>
+    <td port="rule2" border="1"> load,load,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>4124</td>
-    <td>391744</td>
-    <td>11</td>
-    <td port="rule3"> load,load,output, </td>
+    <td border="1"></td>
+    <td border="1">4124</td>
+    <td border="1">391744</td>
+    <td border="1">11</td>
+    <td port="rule3" border="1"> load,load,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>3928</td>
-    <td>590043</td>
-    <td>7</td>
-    <td port="rule4"> load,load,output, </td>
+    <td border="1"></td>
+    <td border="1">3928</td>
+    <td border="1">590043</td>
+    <td border="1">7</td>
+    <td port="rule4" border="1"> load,load,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>48092</td>
-    <td>347622408</td>
-    <td>0</td>
-    <td port="rule5"> load,load,output, </td>
+    <td border="1"></td>
+    <td border="1">48092</td>
+    <td border="1">347622408</td>
+    <td border="1">0</td>
+    <td port="rule5" border="1"> load,load,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>1289</td>
-    <td>232314</td>
-    <td>23</td>
-    <td port="rule6"> load,load,output, </td>
+    <td border="1"></td>
+    <td border="1">1289</td>
+    <td border="1">232314</td>
+    <td border="1">23</td>
+    <td port="rule6" border="1"> load,load,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>1309</td>
-    <td>233926</td>
-    <td>21</td>
-    <td port="rule7"> load,load,output, </td>
+    <td border="1"></td>
+    <td border="1">1309</td>
+    <td border="1">233926</td>
+    <td border="1">21</td>
+    <td port="rule7" border="1"> load,load,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>1198</td>
-    <td>229264</td>
-    <td>0</td>
-    <td port="rule8"> load,load,output, </td>
+    <td border="1"></td>
+    <td border="1">1198</td>
+    <td border="1">229264</td>
+    <td border="1">0</td>
+    <td port="rule8" border="1"> load,load,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>1081</td>
-    <td>223998</td>
-    <td>14</td>
-    <td port="rule9"> load,load,output, </td>
+    <td border="1"></td>
+    <td border="1">1081</td>
+    <td border="1">223998</td>
+    <td border="1">14</td>
+    <td port="rule9" border="1"> load,load,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>1092</td>
-    <td>224916</td>
-    <td>30</td>
-    <td port="rule10"> load,load,output, </td>
+    <td border="1"></td>
+    <td border="1">1092</td>
+    <td border="1">224916</td>
+    <td border="1">30</td>
+    <td port="rule10" border="1"> load,load,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>61219</td>
-    <td>439723377</td>
-    <td>1</td>
-    <td port="rule11"> load,load,output, </td>
+    <td border="1"></td>
+    <td border="1">61219</td>
+    <td border="1">439723377</td>
+    <td border="1">1</td>
+    <td port="rule11" border="1"> load,load,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>40630</td>
-    <td>277234630</td>
-    <td>0</td>
-    <td port="rule12"> load,load,output, </td>
+    <td border="1"></td>
+    <td border="1">40630</td>
+    <td border="1">277234630</td>
+    <td border="1">0</td>
+    <td port="rule12" border="1"> load,load,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>865</td>
-    <td>179653</td>
-    <td>5</td>
-    <td port="rule13"> load,load,output, </td>
+    <td border="1"></td>
+    <td border="1">865</td>
+    <td border="1">179653</td>
+    <td border="1">5</td>
+    <td port="rule13" border="1"> load,load,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>9</td>
-    <td>1770</td>
-    <td>26042</td>
-    <td port="rule14"> resubmit, </td>
+    <td border="1"></td>
+    <td border="1">9</td>
+    <td border="1">1770</td>
+    <td border="1">26042</td>
+    <td port="rule14" border="1"> resubmit, </td>
    </tr>
     </table>>
   ]
@@ -516,231 +516,274 @@ digraph G{ rankdir = LR;
   label = <<table border="0" cellspacing="0">
    <tr><td port="header" border="1" colspan="5" bgcolor="red">TABLE 21</td></tr>
    <tr>
-    <td>in</td>
-    <td>packets</td>
-    <td>bytes</td>
-    <td>idle</td>
-    <td>actions</td>
+    <td border="1">in</td>
+    <td border="1">packets</td>
+    <td border="1">bytes</td>
+    <td border="1">idle</td>
+    <td border="1">actions</td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26027</td>
-    <td port="rule0"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26027</td>
+    <td port="rule0" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26030</td>
-    <td port="rule1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26030</td>
+    <td port="rule1" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26040</td>
-    <td port="rule2"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26040</td>
+    <td port="rule2" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>5532</td>
-    <td>233544</td>
-    <td>16</td>
-    <td port="rule3"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">5532</td>
+    <td border="1">233544</td>
+    <td border="1">16</td>
+    <td port="rule3" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>25996</td>
-    <td port="rule4"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">25996</td>
+    <td port="rule4" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26027</td>
-    <td port="rule5"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26027</td>
+    <td port="rule5" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26029</td>
-    <td port="rule6"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26029</td>
+    <td port="rule6" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26041</td>
-    <td port="rule7"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26041</td>
+    <td port="rule7" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>2</td>
-    <td>140</td>
-    <td>26002</td>
-    <td port="rule8"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">2</td>
+    <td border="1">140</td>
+    <td border="1">26002</td>
+    <td port="rule8" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26030</td>
-    <td port="rule9"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26030</td>
+    <td port="rule9" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26033</td>
-    <td port="rule10"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26033</td>
+    <td port="rule10" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>9</td>
-    <td>1054</td>
-    <td>24482</td>
-    <td port="rule11"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">9</td>
+    <td border="1">1054</td>
+    <td border="1">24482</td>
+    <td port="rule11" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26042</td>
-    <td port="rule12"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26042</td>
+    <td port="rule12" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26041</td>
-    <td port="rule13"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26041</td>
+    <td port="rule13" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26037</td>
-    <td port="rule14"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26037</td>
+    <td port="rule14" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26033</td>
-    <td port="rule15"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26033</td>
+    <td port="rule15" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26036</td>
-    <td port="rule16"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26036</td>
+    <td port="rule16" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>1132</td>
-    <td>48744</td>
-    <td>17464</td>
-    <td port="rule17"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">1132</td>
+    <td border="1">48744</td>
+    <td border="1">17464</td>
+    <td port="rule17" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26037</td>
-    <td port="rule18"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26037</td>
+    <td port="rule18" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26030</td>
-    <td port="rule19"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26030</td>
+    <td port="rule19" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>1</td>
-    <td>70</td>
-    <td>26001</td>
-    <td port="rule20"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">1</td>
+    <td border="1">70</td>
+    <td border="1">26001</td>
+    <td port="rule20" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26026</td>
-    <td port="rule21"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26026</td>
+    <td port="rule21" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26040</td>
-    <td port="rule22"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26040</td>
+    <td port="rule22" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26033</td>
-    <td port="rule23"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26033</td>
+    <td port="rule23" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>25997</td>
-    <td port="rule24"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">25997</td>
+    <td port="rule24" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>15</td>
-    <td>1230</td>
-    <td>8070</td>
-    <td port="rule25"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">15</td>
+    <td border="1">1230</td>
+    <td border="1">8070</td>
+    <td port="rule25" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26037</td>
-    <td port="rule26"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26037</td>
+    <td port="rule26" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>2</td>
-    <td>684</td>
-    <td>25981</td>
-    <td port="rule27"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">2</td>
+    <td border="1">684</td>
+    <td border="1">25981</td>
+    <td port="rule27" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>2599</td>
-    <td>109158</td>
-    <td>23</td>
-    <td port="rule28"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">2599</td>
+    <td border="1">109158</td>
+    <td border="1">23</td>
+    <td port="rule28" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>0</td>
-    <td>0</td>
-    <td>26034</td>
-    <td port="rule29"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
+    <td border="1"></td>
+    <td border="1">0</td>
+    <td border="1">0</td>
+    <td border="1">26034</td>
+    <td port="rule29" border="1"> strip_vlan,set_tunnel,output,output,output,output,output,output,output,output,output, </td>
    </tr>
    <tr>
-    <td></td>
-    <td>350</td>
-    <td>23136</td>
-    <td>6487</td>
-    <td port="rule30"> drop, </td>
+    <td border="1"></td>
+    <td border="1">350</td>
+    <td border="1">23136</td>
+    <td border="1">6487</td>
+    <td port="rule30" border="1"> drop, </td>
    </tr>
     </table>>
   ]
+table0:rule0 -> table2:header [label="resubmit"]
+table0:rule1 -> table2:header [label="resubmit"]
+table0:rule2 -> table2:header [label="resubmit"]
+table0:rule3 -> table1:header [label="resubmit"]
+table0:rule4 -> table2:header [label="resubmit"]
+table0:rule5 -> table2:header [label="resubmit"]
+table0:rule6 -> table2:header [label="resubmit"]
+table0:rule7 -> table2:header [label="resubmit"]
+table0:rule8 -> table2:header [label="resubmit"]
+table0:rule9 -> table2:header [label="resubmit"]
+table1:rule0 -> table20:header [label="resubmit"]
+table1:rule1 -> table21:header [label="resubmit"]
+table2:rule0 -> table10:header [label="resubmit"]
+table2:rule1 -> table10:header [label="resubmit"]
+table2:rule2 -> table10:header [label="resubmit"]
+table2:rule3 -> table10:header [label="resubmit"]
+table2:rule4 -> table10:header [label="resubmit"]
+table2:rule5 -> table10:header [label="resubmit"]
+table2:rule6 -> table10:header [label="resubmit"]
+table2:rule7 -> table10:header [label="resubmit"]
+table2:rule8 -> table10:header [label="resubmit"]
+table2:rule9 -> table10:header [label="resubmit"]
+table2:rule10 -> table10:header [label="resubmit"]
+table2:rule11 -> table10:header [label="resubmit"]
+table2:rule12 -> table10:header [label="resubmit"]
+table2:rule13 -> table10:header [label="resubmit"]
+table2:rule14 -> table10:header [label="resubmit"]
+table2:rule15 -> table10:header [label="resubmit"]
+table2:rule16 -> table10:header [label="resubmit"]
+table2:rule17 -> table10:header [label="resubmit"]
+table2:rule18 -> table10:header [label="resubmit"]
+table2:rule19 -> table10:header [label="resubmit"]
+table2:rule20 -> table10:header [label="resubmit"]
+table2:rule21 -> table10:header [label="resubmit"]
+table2:rule22 -> table10:header [label="resubmit"]
+table2:rule23 -> table10:header [label="resubmit"]
+table2:rule24 -> table10:header [label="resubmit"]
+table2:rule25 -> table10:header [label="resubmit"]
+table2:rule26 -> table10:header [label="resubmit"]
+table2:rule27 -> table10:header [label="resubmit"]
+table2:rule28 -> table10:header [label="resubmit"]
+table2:rule29 -> table10:header [label="resubmit"]
+table20:rule14 -> table21:header [label="resubmit"]
 }
 
 

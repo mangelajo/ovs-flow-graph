@@ -50,11 +50,11 @@ class OFCTLRulesToDOT:
         self.add('   <tr><td port="header" border="1" colspan="5" '
                  'bgcolor="red">TABLE %d</td></tr>' % table_nr)
         self.add('   <tr>')
-        self.add('    <td>in</td>')
-        self.add('    <td>packets</td>')
-        self.add('    <td>bytes</td>')
-        self.add('    <td>idle</td>')
-        self.add('    <td>actions</td>')
+        self.add('    <td border="1">in</td>')
+        self.add('    <td border="1">packets</td>')
+        self.add('    <td border="1">bytes</td>')
+        self.add('    <td border="1">idle</td>')
+        self.add('    <td border="1">actions</td>')
         self.add('   </tr>')
 
     def add_table_rule(self,rule,rule_id):
@@ -76,11 +76,11 @@ class OFCTLRulesToDOT:
                 action_str += action.keys()[0]+","
 
         self.add('   <tr>')
-        self.add('    <td>%s</td>' % in_port )
-        self.add('    <td>%s</td>' % data['n_packets'])
-        self.add('    <td>%s</td>' % data['n_bytes'])
-        self.add('    <td>%s</td>' % data['idle_age'])
-        self.add('    <td port="rule%d"> %s </td>'% (rule_id,action_str))
+        self.add('    <td border="1">%s</td>' % in_port )
+        self.add('    <td border="1">%s</td>' % data['n_packets'])
+        self.add('    <td border="1">%s</td>' % data['n_bytes'])
+        self.add('    <td border="1">%s</td>' % data['idle_age'])
+        self.add('    <td port="rule%d" border="1"> %s </td>'% (rule_id,action_str))
         self.add('   </tr>')
 
     def add_table_footer(self,table_nr):
@@ -89,7 +89,21 @@ class OFCTLRulesToDOT:
 
 
     def add_connections(self,table_nr,rules):
-        pass
+        rule_id = 0
+        for rule in rules:
+            self.add_table_connection(table_nr,rule,rule_id)
+            rule_id += 1
+
+    def add_table_connection(self,table_nr,rule,rule_id):
+        #node1:port2 -> node2:port6 [label="language_id"]
+        data = rule['data']
+        actions = rule['actions']
+        for action in actions:
+            if type(action)==dict:
+                for function,params in action.items():
+                    if function=="resubmit":
+                        self.add('table%d:rule%d -> table%s:header [label="resubmit"]' %(table_nr,rule_id,params))
+
 
     def add_footer(self):
         self.add("}\n")
