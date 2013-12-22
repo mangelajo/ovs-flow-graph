@@ -9,12 +9,14 @@ class OFCTLDumpFlowParser:
     def parse(self):
 
         rules = []
-
+        line_id = 0
         lines = self._data_lines(self.data)
         for line in lines:
             line_fields = self._line_fields(line)
             if line_fields:
+                line_fields['id'] = line_id
                 rules.append(line_fields)
+                line_id += 1
 
         return rules
 

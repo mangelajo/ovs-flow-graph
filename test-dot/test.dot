@@ -1,889 +1,1072 @@
-digraph G{ rankdir = LR;
- table0
- [
-  shape = none
-  label = <<table border="0" cellspacing="0">
-   <tr><td port="header" border="1" colspan="6" bgcolor="red">TABLE 0</td></tr>
-   <tr>
-    <td border="1">in</td>
-    <td border="1">packets</td>
-    <td border="1">bytes</td>
-    <td border="1">idle</td>
-    <td border="1">actions</td>
-    <td border="1">outputs</td>
-   </tr>
-   <tr>
-    <td border="1">port:3 </td>
-    <td border="1">2222</td>
-    <td border="1">245928</td>
-    <td border="1">23</td>
-    <td border="1">  </td>
-    <td port="rule0" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">port:7 </td>
-    <td border="1">3176262</td>
-    <td border="1">256409657</td>
-    <td border="1">0</td>
-    <td border="1">  </td>
-    <td port="rule1" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">port:8 </td>
-    <td border="1">3112144</td>
-    <td border="1">251819494</td>
-    <td border="1">0</td>
-    <td border="1">  </td>
-    <td port="rule2" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">port:1 </td>
-    <td border="1">5490096</td>
-    <td border="1">38308835961</td>
-    <td border="1">0</td>
-    <td border="1">  </td>
-    <td port="rule3" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">port:9 </td>
-    <td border="1">2388162</td>
-    <td border="1">194765487</td>
-    <td border="1">565</td>
-    <td border="1">  </td>
-    <td port="rule4" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">port:10 </td>
-    <td border="1">2347360</td>
-    <td border="1">191341356</td>
-    <td border="1">0</td>
-    <td border="1">  </td>
-    <td port="rule5" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">port:5 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">25867</td>
-    <td border="1">  </td>
-    <td port="rule6" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">port:6 </td>
-    <td border="1">607764</td>
-    <td border="1">49957951</td>
-    <td border="1">11</td>
-    <td border="1">  </td>
-    <td port="rule7" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">port:2 </td>
-    <td border="1">1485</td>
-    <td border="1">173670</td>
-    <td border="1">6634</td>
-    <td border="1">  </td>
-    <td port="rule8" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">port:4 </td>
-    <td border="1">4218</td>
-    <td border="1">527786</td>
-    <td border="1">27</td>
-    <td border="1">  </td>
-    <td port="rule9" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1"></td>
-    <td border="1">6</td>
-    <td border="1">384</td>
-    <td border="1">25974</td>
-    <td border="1"> drop, </td>
-    <td port="rule10" border="1">  </td>
-   </tr>
-    </table>>
+
+digraph G
+{
+  rankdir=LR;
+  
+  table0
+  [
+
+      shape = none
+      label = <<table border="0" cellspacing="0">
+           <tr><td port="header" border="1" colspan="6"
+                 bgcolor="red">TABLE 0</td>
+           </tr>
+           <tr>
+              <td border="1">in</td>
+              <td border="1">packets</td>
+              <td border="1">bytes</td>
+              <td border="1">idle</td>
+              <td border="1">actions</td>
+              <td border="1">outputs</td>
+           </tr>
+
+           
+           <tr>
+              <td border="1">port:3 </td>
+              <td border="1">2222</td>
+              <td border="1">245928</td>
+              <td border="1">23</td>
+              <td border="1"></td>
+              <td port="rule0" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">port:7 </td>
+              <td border="1">3176262</td>
+              <td border="1">256409657</td>
+              <td border="1">0</td>
+              <td border="1"></td>
+              <td port="rule1" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">port:8 </td>
+              <td border="1">3112144</td>
+              <td border="1">251819494</td>
+              <td border="1">0</td>
+              <td border="1"></td>
+              <td port="rule2" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">port:1 </td>
+              <td border="1">5490096</td>
+              <td border="1">38308835961</td>
+              <td border="1">0</td>
+              <td border="1"></td>
+              <td port="rule3" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">port:9 </td>
+              <td border="1">2388162</td>
+              <td border="1">194765487</td>
+              <td border="1">565</td>
+              <td border="1"></td>
+              <td port="rule4" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">port:10 </td>
+              <td border="1">2347360</td>
+              <td border="1">191341356</td>
+              <td border="1">0</td>
+              <td border="1"></td>
+              <td port="rule5" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">port:5 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">25867</td>
+              <td border="1"></td>
+              <td port="rule6" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">port:6 </td>
+              <td border="1">607764</td>
+              <td border="1">49957951</td>
+              <td border="1">11</td>
+              <td border="1"></td>
+              <td port="rule7" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">port:2 </td>
+              <td border="1">1485</td>
+              <td border="1">173670</td>
+              <td border="1">6634</td>
+              <td border="1"></td>
+              <td port="rule8" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">port:4 </td>
+              <td border="1">4218</td>
+              <td border="1">527786</td>
+              <td border="1">27</td>
+              <td border="1"></td>
+              <td port="rule9" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1"></td>
+              <td border="1">6</td>
+              <td border="1">384</td>
+              <td border="1">25974</td>
+              <td border="1">drop</td>
+              <td port="rule10" border="1"></td>
+           </tr>
+           
+          </table>>
   ]
- table1
- [
-  shape = none
-  label = <<table border="0" cellspacing="0">
-   <tr><td port="header" border="1" colspan="6" bgcolor="red">TABLE 1</td></tr>
-   <tr>
-    <td border="1">in</td>
-    <td border="1">packets</td>
-    <td border="1">bytes</td>
-    <td border="1">idle</td>
-    <td border="1">actions</td>
-    <td border="1">outputs</td>
-   </tr>
-   <tr>
-    <td border="1">dst:00:00:00:00:00:00/01:00:00:00:00:00 </td>
-    <td border="1">5480460</td>
-    <td border="1">38308418433</td>
-    <td border="1">0</td>
-    <td border="1">  </td>
-    <td port="rule0" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">dst:01:00:00:00:00:00/01:00:00:00:00:00 </td>
-    <td border="1">9633</td>
-    <td border="1">415990</td>
-    <td border="1">16</td>
-    <td border="1">  </td>
-    <td port="rule1" border="1">  </td>
-   </tr>
-    </table>>
+  
+  table1
+  [
+
+      shape = none
+      label = <<table border="0" cellspacing="0">
+           <tr><td port="header" border="1" colspan="6"
+                 bgcolor="red">TABLE 1</td>
+           </tr>
+           <tr>
+              <td border="1">in</td>
+              <td border="1">packets</td>
+              <td border="1">bytes</td>
+              <td border="1">idle</td>
+              <td border="1">actions</td>
+              <td border="1">outputs</td>
+           </tr>
+
+           
+           <tr>
+              <td border="1">dst:00:00:00:00:00:00/01:00:00:00:00:00 </td>
+              <td border="1">5480460</td>
+              <td border="1">38308418433</td>
+              <td border="1">0</td>
+              <td border="1"></td>
+              <td port="rule11" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">dst:01:00:00:00:00:00/01:00:00:00:00:00 </td>
+              <td border="1">9633</td>
+              <td border="1">415990</td>
+              <td border="1">16</td>
+              <td border="1"></td>
+              <td port="rule12" border="1"></td>
+           </tr>
+           
+          </table>>
   ]
- table2
- [
-  shape = none
-  label = <<table border="0" cellspacing="0">
-   <tr><td port="header" border="1" colspan="6" bgcolor="red">TABLE 2</td></tr>
-   <tr>
-    <td border="1">in</td>
-    <td border="1">packets</td>
-    <td border="1">bytes</td>
-    <td border="1">idle</td>
-    <td border="1">actions</td>
-    <td border="1">outputs</td>
-   </tr>
-   <tr>
-    <td border="1">tun:0xd </td>
-    <td border="1">8189</td>
-    <td border="1">997600</td>
-    <td border="1">14</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule0" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x10 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26037</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule1" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x14 </td>
-    <td border="1">1296</td>
-    <td border="1">330419</td>
-    <td border="1">5</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule2" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x20 </td>
-    <td border="1">4193</td>
-    <td border="1">545332</td>
-    <td border="1">7</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule3" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0xa </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26036</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule4" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x1c </td>
-    <td border="1">4006</td>
-    <td border="1">406160</td>
-    <td border="1">0</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule5" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x2 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26040</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule6" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x11 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26036</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule7" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x13 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26033</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule8" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x9 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26029</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule9" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0xc </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26033</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule10" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x1e </td>
-    <td border="1">2364</td>
-    <td border="1">261984</td>
-    <td border="1">23</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule11" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0xe </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26029</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule12" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x19 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26044</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule13" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x7 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26027</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule14" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0xb </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26033</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule15" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x1d </td>
-    <td border="1">7373</td>
-    <td border="1">728166</td>
-    <td border="1">11</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule16" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x5 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26044</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule17" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x15 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26033</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule18" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x3 </td>
-    <td border="1">12324889</td>
-    <td border="1">1001952307</td>
-    <td border="1">0</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule19" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x6 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26045</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule20" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x1f </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26037</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule21" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x1a </td>
-    <td border="1">2385</td>
-    <td border="1">261870</td>
-    <td border="1">21</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule22" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x8 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26026</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule23" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x16 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26029</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule24" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x1 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26043</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule25" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x1b </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26040</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule26" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x4 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26027</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule27" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0x12 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26040</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule28" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1">tun:0xf </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26039</td>
-    <td border="1"> mod_vlan_vid,  </td>
-    <td port="rule29" border="1">  </td>
-   </tr>
-   <tr>
-    <td border="1"></td>
-    <td border="1">11</td>
-    <td border="1">762</td>
-    <td border="1">26013</td>
-    <td border="1"> drop, </td>
-    <td port="rule30" border="1">  </td>
-   </tr>
-    </table>>
+  
+  table2
+  [
+
+      shape = none
+      label = <<table border="0" cellspacing="0">
+           <tr><td port="header" border="1" colspan="6"
+                 bgcolor="red">TABLE 2</td>
+           </tr>
+           <tr>
+              <td border="1">in</td>
+              <td border="1">packets</td>
+              <td border="1">bytes</td>
+              <td border="1">idle</td>
+              <td border="1">actions</td>
+              <td border="1">outputs</td>
+           </tr>
+
+           
+           <tr>
+              <td border="1">tun:0xd </td>
+              <td border="1">8189</td>
+              <td border="1">997600</td>
+              <td border="1">14</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule13" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x10 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26037</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule14" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x14 </td>
+              <td border="1">1296</td>
+              <td border="1">330419</td>
+              <td border="1">5</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule15" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x20 </td>
+              <td border="1">4193</td>
+              <td border="1">545332</td>
+              <td border="1">7</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule16" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0xa </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26036</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule17" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x1c </td>
+              <td border="1">4006</td>
+              <td border="1">406160</td>
+              <td border="1">0</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule18" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x2 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26040</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule19" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x11 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26036</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule20" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x13 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26033</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule21" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x9 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26029</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule22" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0xc </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26033</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule23" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x1e </td>
+              <td border="1">2364</td>
+              <td border="1">261984</td>
+              <td border="1">23</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule24" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0xe </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26029</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule25" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x19 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26044</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule26" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x7 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26027</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule27" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0xb </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26033</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule28" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x1d </td>
+              <td border="1">7373</td>
+              <td border="1">728166</td>
+              <td border="1">11</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule29" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x5 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26044</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule30" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x15 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26033</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule31" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x3 </td>
+              <td border="1">12324889</td>
+              <td border="1">1001952307</td>
+              <td border="1">0</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule32" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x6 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26045</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule33" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x1f </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26037</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule34" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x1a </td>
+              <td border="1">2385</td>
+              <td border="1">261870</td>
+              <td border="1">21</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule35" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x8 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26026</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule36" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x16 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26029</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule37" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x1 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26043</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule38" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x1b </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26040</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule39" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x4 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26027</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule40" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0x12 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26040</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule41" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1">tun:0xf </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26039</td>
+              <td border="1">mod_vlan_vid</td>
+              <td port="rule42" border="1"></td>
+           </tr>
+           
+           <tr>
+              <td border="1"></td>
+              <td border="1">11</td>
+              <td border="1">762</td>
+              <td border="1">26013</td>
+              <td border="1">drop</td>
+              <td port="rule43" border="1"></td>
+           </tr>
+           
+          </table>>
   ]
- table3
- [
-  shape = none
-  label = <<table border="0" cellspacing="0">
-   <tr><td port="header" border="1" colspan="6" bgcolor="red">TABLE 3</td></tr>
-   <tr>
-    <td border="1">in</td>
-    <td border="1">packets</td>
-    <td border="1">bytes</td>
-    <td border="1">idle</td>
-    <td border="1">actions</td>
-    <td border="1">outputs</td>
-   </tr>
-   <tr>
-    <td border="1"></td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26046</td>
-    <td border="1"> drop, </td>
-    <td port="rule0" border="1">  </td>
-   </tr>
-    </table>>
+  
+  table3
+  [
+
+      shape = none
+      label = <<table border="0" cellspacing="0">
+           <tr><td port="header" border="1" colspan="6"
+                 bgcolor="red">TABLE 3</td>
+           </tr>
+           <tr>
+              <td border="1">in</td>
+              <td border="1">packets</td>
+              <td border="1">bytes</td>
+              <td border="1">idle</td>
+              <td border="1">actions</td>
+              <td border="1">outputs</td>
+           </tr>
+
+           
+           <tr>
+              <td border="1"></td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26046</td>
+              <td border="1">drop</td>
+              <td port="rule44" border="1"></td>
+           </tr>
+           
+          </table>>
   ]
- table10
- [
-  shape = none
-  label = <<table border="0" cellspacing="0">
-   <tr><td port="header" border="1" colspan="6" bgcolor="red">TABLE 10</td></tr>
-   <tr>
-    <td border="1">in</td>
-    <td border="1">packets</td>
-    <td border="1">bytes</td>
-    <td border="1">idle</td>
-    <td border="1">actions</td>
-    <td border="1">outputs</td>
-   </tr>
-   <tr>
-    <td border="1"></td>
-    <td border="1">12354695</td>
-    <td border="1">1005483838</td>
-    <td border="1">0</td>
-    <td border="1"> , </td>
-    <td port="rule0" border="1"> 1,  </td>
-   </tr>
-    </table>>
+  
+  table10
+  [
+
+      shape = none
+      label = <<table border="0" cellspacing="0">
+           <tr><td port="header" border="1" colspan="6"
+                 bgcolor="red">TABLE 10</td>
+           </tr>
+           <tr>
+              <td border="1">in</td>
+              <td border="1">packets</td>
+              <td border="1">bytes</td>
+              <td border="1">idle</td>
+              <td border="1">actions</td>
+              <td border="1">outputs</td>
+           </tr>
+
+           
+           <tr>
+              <td border="1"></td>
+              <td border="1">12354695</td>
+              <td border="1">1005483838</td>
+              <td border="1">0</td>
+              <td border="1"></td>
+              <td port="rule45" border="1">1</td>
+           </tr>
+           
+          </table>>
   ]
- table20
- [
-  shape = none
-  label = <<table border="0" cellspacing="0">
-   <tr><td port="header" border="1" colspan="6" bgcolor="red">TABLE 20</td></tr>
-   <tr>
-    <td border="1">in</td>
-    <td border="1">packets</td>
-    <td border="1">bytes</td>
-    <td border="1">idle</td>
-    <td border="1">actions</td>
-    <td border="1">outputs</td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x001e/0x0fff dst:fa:16:3e:1a:5e:97 </td>
-    <td border="1">1142</td>
-    <td border="1">225252</td>
-    <td border="1">27</td>
-    <td border="1"> load, load,  </td>
-    <td port="rule0" border="1"> 4,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x001e/0x0fff dst:fa:16:3e:9d:90:fa </td>
-    <td border="1">1100</td>
-    <td border="1">224464</td>
-    <td border="1">42</td>
-    <td border="1"> load, load,  </td>
-    <td port="rule1" border="1"> 4,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x0004/0x0fff dst:fa:16:3e:34:ea:a8 </td>
-    <td border="1">1337</td>
-    <td border="1">233364</td>
-    <td border="1">1</td>
-    <td border="1"> load, load,  </td>
-    <td port="rule2" border="1"> 10,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x0007/0x0fff dst:fa:16:3e:8e:ca:fa </td>
-    <td border="1">4124</td>
-    <td border="1">391744</td>
-    <td border="1">11</td>
-    <td border="1"> load, load,  </td>
-    <td port="rule3" border="1"> 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x0015/0x0fff dst:fa:16:3e:4b:17:a8 </td>
-    <td border="1">3928</td>
-    <td border="1">590043</td>
-    <td border="1">7</td>
-    <td border="1"> load, load,  </td>
-    <td port="rule4" border="1"> 7,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x0004/0x0fff dst:fa:16:3e:89:4e:78 </td>
-    <td border="1">48092</td>
-    <td border="1">347622408</td>
-    <td border="1">0</td>
-    <td border="1"> load, load,  </td>
-    <td port="rule5" border="1"> 7,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x001d/0x0fff dst:fa:16:3e:4a:76:4b </td>
-    <td border="1">1289</td>
-    <td border="1">232314</td>
-    <td border="1">23</td>
-    <td border="1"> load, load,  </td>
-    <td port="rule6" border="1"> 3,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x0016/0x0fff dst:fa:16:3e:7b:1d:13 </td>
-    <td border="1">1309</td>
-    <td border="1">233926</td>
-    <td border="1">21</td>
-    <td border="1"> load, load,  </td>
-    <td port="rule7" border="1"> 10,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x0006/0x0fff dst:fa:16:3e:14:ae:7f </td>
-    <td border="1">1198</td>
-    <td border="1">229264</td>
-    <td border="1">0</td>
-    <td border="1"> load, load,  </td>
-    <td port="rule8" border="1"> 10,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x001e/0x0fff dst:fa:16:3e:bd:f8:6c </td>
-    <td border="1">1081</td>
-    <td border="1">223998</td>
-    <td border="1">14</td>
-    <td border="1"> load, load,  </td>
-    <td port="rule9" border="1"> 10,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x0007/0x0fff dst:fa:16:3e:f5:4c:67 </td>
-    <td border="1">1092</td>
-    <td border="1">224916</td>
-    <td border="1">30</td>
-    <td border="1"> load, load,  </td>
-    <td port="rule10" border="1"> 10,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x0004/0x0fff dst:fa:16:3e:78:9e:57 </td>
-    <td border="1">61219</td>
-    <td border="1">439723377</td>
-    <td border="1">1</td>
-    <td border="1"> load, load,  </td>
-    <td port="rule11" border="1"> 10,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x0004/0x0fff dst:fa:16:3e:1c:6a:21 </td>
-    <td border="1">40630</td>
-    <td border="1">277234630</td>
-    <td border="1">0</td>
-    <td border="1"> load, load,  </td>
-    <td port="rule12" border="1"> 8,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x0010/0x0fff dst:fa:16:3e:ae:26:d8 </td>
-    <td border="1">865</td>
-    <td border="1">179653</td>
-    <td border="1">5</td>
-    <td border="1"> load, load,  </td>
-    <td port="rule13" border="1"> 7,  </td>
-   </tr>
-   <tr>
-    <td border="1"></td>
-    <td border="1">9</td>
-    <td border="1">1770</td>
-    <td border="1">26042</td>
-    <td border="1">  </td>
-    <td port="rule14" border="1">  </td>
-   </tr>
-    </table>>
+  
+  table20
+  [
+
+      shape = none
+      label = <<table border="0" cellspacing="0">
+           <tr><td port="header" border="1" colspan="6"
+                 bgcolor="red">TABLE 20</td>
+           </tr>
+           <tr>
+              <td border="1">in</td>
+              <td border="1">packets</td>
+              <td border="1">bytes</td>
+              <td border="1">idle</td>
+              <td border="1">actions</td>
+              <td border="1">outputs</td>
+           </tr>
+
+           
+           <tr>
+              <td border="1">vlan:0x001e/0x0fff dst:fa:16:3e:1a:5e:97 </td>
+              <td border="1">1142</td>
+              <td border="1">225252</td>
+              <td border="1">27</td>
+              <td border="1">load, load</td>
+              <td port="rule46" border="1">4</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x001e/0x0fff dst:fa:16:3e:9d:90:fa </td>
+              <td border="1">1100</td>
+              <td border="1">224464</td>
+              <td border="1">42</td>
+              <td border="1">load, load</td>
+              <td port="rule47" border="1">4</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x0004/0x0fff dst:fa:16:3e:34:ea:a8 </td>
+              <td border="1">1337</td>
+              <td border="1">233364</td>
+              <td border="1">1</td>
+              <td border="1">load, load</td>
+              <td port="rule48" border="1">10</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x0007/0x0fff dst:fa:16:3e:8e:ca:fa </td>
+              <td border="1">4124</td>
+              <td border="1">391744</td>
+              <td border="1">11</td>
+              <td border="1">load, load</td>
+              <td port="rule49" border="1">6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x0015/0x0fff dst:fa:16:3e:4b:17:a8 </td>
+              <td border="1">3928</td>
+              <td border="1">590043</td>
+              <td border="1">7</td>
+              <td border="1">load, load</td>
+              <td port="rule50" border="1">7</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x0004/0x0fff dst:fa:16:3e:89:4e:78 </td>
+              <td border="1">48092</td>
+              <td border="1">347622408</td>
+              <td border="1">0</td>
+              <td border="1">load, load</td>
+              <td port="rule51" border="1">7</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x001d/0x0fff dst:fa:16:3e:4a:76:4b </td>
+              <td border="1">1289</td>
+              <td border="1">232314</td>
+              <td border="1">23</td>
+              <td border="1">load, load</td>
+              <td port="rule52" border="1">3</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x0016/0x0fff dst:fa:16:3e:7b:1d:13 </td>
+              <td border="1">1309</td>
+              <td border="1">233926</td>
+              <td border="1">21</td>
+              <td border="1">load, load</td>
+              <td port="rule53" border="1">10</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x0006/0x0fff dst:fa:16:3e:14:ae:7f </td>
+              <td border="1">1198</td>
+              <td border="1">229264</td>
+              <td border="1">0</td>
+              <td border="1">load, load</td>
+              <td port="rule54" border="1">10</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x001e/0x0fff dst:fa:16:3e:bd:f8:6c </td>
+              <td border="1">1081</td>
+              <td border="1">223998</td>
+              <td border="1">14</td>
+              <td border="1">load, load</td>
+              <td port="rule55" border="1">10</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x0007/0x0fff dst:fa:16:3e:f5:4c:67 </td>
+              <td border="1">1092</td>
+              <td border="1">224916</td>
+              <td border="1">30</td>
+              <td border="1">load, load</td>
+              <td port="rule56" border="1">10</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x0004/0x0fff dst:fa:16:3e:78:9e:57 </td>
+              <td border="1">61219</td>
+              <td border="1">439723377</td>
+              <td border="1">1</td>
+              <td border="1">load, load</td>
+              <td port="rule57" border="1">10</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x0004/0x0fff dst:fa:16:3e:1c:6a:21 </td>
+              <td border="1">40630</td>
+              <td border="1">277234630</td>
+              <td border="1">0</td>
+              <td border="1">load, load</td>
+              <td port="rule58" border="1">8</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x0010/0x0fff dst:fa:16:3e:ae:26:d8 </td>
+              <td border="1">865</td>
+              <td border="1">179653</td>
+              <td border="1">5</td>
+              <td border="1">load, load</td>
+              <td port="rule59" border="1">7</td>
+           </tr>
+           
+           <tr>
+              <td border="1"></td>
+              <td border="1">9</td>
+              <td border="1">1770</td>
+              <td border="1">26042</td>
+              <td border="1"></td>
+              <td port="rule60" border="1"></td>
+           </tr>
+           
+          </table>>
   ]
- table21
- [
-  shape = none
-  label = <<table border="0" cellspacing="0">
-   <tr><td port="header" border="1" colspan="6" bgcolor="red">TABLE 21</td></tr>
-   <tr>
-    <td border="1">in</td>
-    <td border="1">packets</td>
-    <td border="1">bytes</td>
-    <td border="1">idle</td>
-    <td border="1">actions</td>
-    <td border="1">outputs</td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x1a </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26027</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule0" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x18 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26030</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule1" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0xa </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26040</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule2" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x4 </td>
-    <td border="1">5532</td>
-    <td border="1">233544</td>
-    <td border="1">16</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule3" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x1 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">25996</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule4" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x1b </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26027</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule5" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x19 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26029</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule6" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x8 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26041</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule7" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0xb </td>
-    <td border="1">2</td>
-    <td border="1">140</td>
-    <td border="1">26002</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule8" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x17 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26030</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule9" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x13 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26033</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule10" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x7 </td>
-    <td border="1">9</td>
-    <td border="1">1054</td>
-    <td border="1">24482</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule11" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x5 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26042</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule12" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x3 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26041</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule13" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0xf </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26037</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule14" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x12 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26033</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule15" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x10 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26036</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule16" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x1e </td>
-    <td border="1">1132</td>
-    <td border="1">48744</td>
-    <td border="1">17464</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule17" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0xe </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26037</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule18" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x16 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26030</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule19" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0xd </td>
-    <td border="1">1</td>
-    <td border="1">70</td>
-    <td border="1">26001</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule20" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x1c </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26026</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule21" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x9 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26040</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule22" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x14 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26033</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule23" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x2 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">25997</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule24" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x15 </td>
-    <td border="1">15</td>
-    <td border="1">1230</td>
-    <td border="1">8070</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule25" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0xc </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26037</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule26" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x1d </td>
-    <td border="1">2</td>
-    <td border="1">684</td>
-    <td border="1">25981</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule27" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x6 </td>
-    <td border="1">2599</td>
-    <td border="1">109158</td>
-    <td border="1">23</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule28" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1">vlan:0x11 </td>
-    <td border="1">0</td>
-    <td border="1">0</td>
-    <td border="1">26034</td>
-    <td border="1"> strip_vlan,set_tunnel,  </td>
-    <td port="rule29" border="1"> 8, 9, 2, 5, 10, 7, 4, 3, 6,  </td>
-   </tr>
-   <tr>
-    <td border="1"></td>
-    <td border="1">350</td>
-    <td border="1">23136</td>
-    <td border="1">6487</td>
-    <td border="1"> drop, </td>
-    <td port="rule30" border="1">  </td>
-   </tr>
-    </table>>
+  
+  table21
+  [
+
+      shape = none
+      label = <<table border="0" cellspacing="0">
+           <tr><td port="header" border="1" colspan="6"
+                 bgcolor="red">TABLE 21</td>
+           </tr>
+           <tr>
+              <td border="1">in</td>
+              <td border="1">packets</td>
+              <td border="1">bytes</td>
+              <td border="1">idle</td>
+              <td border="1">actions</td>
+              <td border="1">outputs</td>
+           </tr>
+
+           
+           <tr>
+              <td border="1">vlan:0x1a </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26027</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule61" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x18 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26030</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule62" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0xa </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26040</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule63" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x4 </td>
+              <td border="1">5532</td>
+              <td border="1">233544</td>
+              <td border="1">16</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule64" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x1 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">25996</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule65" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x1b </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26027</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule66" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x19 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26029</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule67" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x8 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26041</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule68" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0xb </td>
+              <td border="1">2</td>
+              <td border="1">140</td>
+              <td border="1">26002</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule69" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x17 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26030</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule70" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x13 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26033</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule71" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x7 </td>
+              <td border="1">9</td>
+              <td border="1">1054</td>
+              <td border="1">24482</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule72" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x5 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26042</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule73" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x3 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26041</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule74" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0xf </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26037</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule75" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x12 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26033</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule76" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x10 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26036</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule77" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x1e </td>
+              <td border="1">1132</td>
+              <td border="1">48744</td>
+              <td border="1">17464</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule78" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0xe </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26037</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule79" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x16 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26030</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule80" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0xd </td>
+              <td border="1">1</td>
+              <td border="1">70</td>
+              <td border="1">26001</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule81" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x1c </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26026</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule82" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x9 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26040</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule83" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x14 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26033</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule84" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x2 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">25997</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule85" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x15 </td>
+              <td border="1">15</td>
+              <td border="1">1230</td>
+              <td border="1">8070</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule86" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0xc </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26037</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule87" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x1d </td>
+              <td border="1">2</td>
+              <td border="1">684</td>
+              <td border="1">25981</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule88" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x6 </td>
+              <td border="1">2599</td>
+              <td border="1">109158</td>
+              <td border="1">23</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule89" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1">vlan:0x11 </td>
+              <td border="1">0</td>
+              <td border="1">0</td>
+              <td border="1">26034</td>
+              <td border="1">strip_vlan, set_tunnel</td>
+              <td port="rule90" border="1">8, 9, 2, 5, 10, 7, 4, 3, 6</td>
+           </tr>
+           
+           <tr>
+              <td border="1"></td>
+              <td border="1">350</td>
+              <td border="1">23136</td>
+              <td border="1">6487</td>
+              <td border="1">drop</td>
+              <td port="rule91" border="1"></td>
+           </tr>
+           
+          </table>>
   ]
-table0:rule0 -> table2:header [arrowType="vee"]
-table0:rule1 -> table2:header [arrowType="vee"]
-table0:rule2 -> table2:header [arrowType="vee"]
-table0:rule3 -> table1:header [arrowType="vee"]
-table0:rule4 -> table2:header [arrowType="vee"]
-table0:rule5 -> table2:header [arrowType="vee"]
-table0:rule6 -> table2:header [arrowType="vee"]
-table0:rule7 -> table2:header [arrowType="vee"]
-table0:rule8 -> table2:header [arrowType="vee"]
-table0:rule9 -> table2:header [arrowType="vee"]
-table1:rule0 -> table20:header [arrowType="vee"]
-table1:rule1 -> table21:header [arrowType="vee"]
-table2:rule0 -> table10:header [arrowType="vee"]
-table2:rule1 -> table10:header [arrowType="vee"]
-table2:rule2 -> table10:header [arrowType="vee"]
-table2:rule3 -> table10:header [arrowType="vee"]
-table2:rule4 -> table10:header [arrowType="vee"]
-table2:rule5 -> table10:header [arrowType="vee"]
-table2:rule6 -> table10:header [arrowType="vee"]
-table2:rule7 -> table10:header [arrowType="vee"]
-table2:rule8 -> table10:header [arrowType="vee"]
-table2:rule9 -> table10:header [arrowType="vee"]
-table2:rule10 -> table10:header [arrowType="vee"]
-table2:rule11 -> table10:header [arrowType="vee"]
-table2:rule12 -> table10:header [arrowType="vee"]
-table2:rule13 -> table10:header [arrowType="vee"]
-table2:rule14 -> table10:header [arrowType="vee"]
-table2:rule15 -> table10:header [arrowType="vee"]
-table2:rule16 -> table10:header [arrowType="vee"]
-table2:rule17 -> table10:header [arrowType="vee"]
-table2:rule18 -> table10:header [arrowType="vee"]
-table2:rule19 -> table10:header [arrowType="vee"]
-table2:rule20 -> table10:header [arrowType="vee"]
-table2:rule21 -> table10:header [arrowType="vee"]
-table2:rule22 -> table10:header [arrowType="vee"]
-table2:rule23 -> table10:header [arrowType="vee"]
-table2:rule24 -> table10:header [arrowType="vee"]
-table2:rule25 -> table10:header [arrowType="vee"]
-table2:rule26 -> table10:header [arrowType="vee"]
-table2:rule27 -> table10:header [arrowType="vee"]
-table2:rule28 -> table10:header [arrowType="vee"]
-table2:rule29 -> table10:header [arrowType="vee"]
-table10:rule0 -> table20:header [label="learn"]
-table20:rule14 -> table21:header [arrowType="vee"]
+  
+
+  
+        table0:rule0 -> table2:header [arrowType="vee"]
+  
+        table0:rule1 -> table2:header [arrowType="vee"]
+  
+        table0:rule2 -> table2:header [arrowType="vee"]
+  
+        table0:rule3 -> table1:header [arrowType="vee"]
+  
+        table0:rule4 -> table2:header [arrowType="vee"]
+  
+        table0:rule5 -> table2:header [arrowType="vee"]
+  
+        table0:rule6 -> table2:header [arrowType="vee"]
+  
+        table0:rule7 -> table2:header [arrowType="vee"]
+  
+        table0:rule8 -> table2:header [arrowType="vee"]
+  
+        table0:rule9 -> table2:header [arrowType="vee"]
+  
+        table1:rule11 -> table20:header [arrowType="vee"]
+  
+        table1:rule12 -> table21:header [arrowType="vee"]
+  
+        table2:rule13 -> table10:header [arrowType="vee"]
+  
+        table2:rule14 -> table10:header [arrowType="vee"]
+  
+        table2:rule15 -> table10:header [arrowType="vee"]
+  
+        table2:rule16 -> table10:header [arrowType="vee"]
+  
+        table2:rule17 -> table10:header [arrowType="vee"]
+  
+        table2:rule18 -> table10:header [arrowType="vee"]
+  
+        table2:rule19 -> table10:header [arrowType="vee"]
+  
+        table2:rule20 -> table10:header [arrowType="vee"]
+  
+        table2:rule21 -> table10:header [arrowType="vee"]
+  
+        table2:rule22 -> table10:header [arrowType="vee"]
+  
+        table2:rule23 -> table10:header [arrowType="vee"]
+  
+        table2:rule24 -> table10:header [arrowType="vee"]
+  
+        table2:rule25 -> table10:header [arrowType="vee"]
+  
+        table2:rule26 -> table10:header [arrowType="vee"]
+  
+        table2:rule27 -> table10:header [arrowType="vee"]
+  
+        table2:rule28 -> table10:header [arrowType="vee"]
+  
+        table2:rule29 -> table10:header [arrowType="vee"]
+  
+        table2:rule30 -> table10:header [arrowType="vee"]
+  
+        table2:rule31 -> table10:header [arrowType="vee"]
+  
+        table2:rule32 -> table10:header [arrowType="vee"]
+  
+        table2:rule33 -> table10:header [arrowType="vee"]
+  
+        table2:rule34 -> table10:header [arrowType="vee"]
+  
+        table2:rule35 -> table10:header [arrowType="vee"]
+  
+        table2:rule36 -> table10:header [arrowType="vee"]
+  
+        table2:rule37 -> table10:header [arrowType="vee"]
+  
+        table2:rule38 -> table10:header [arrowType="vee"]
+  
+        table2:rule39 -> table10:header [arrowType="vee"]
+  
+        table2:rule40 -> table10:header [arrowType="vee"]
+  
+        table2:rule41 -> table10:header [arrowType="vee"]
+  
+        table2:rule42 -> table10:header [arrowType="vee"]
+  
+        table10:rule45 -> table20:header [label="learn"]
+  
+        table20:rule60 -> table21:header [arrowType="vee"]
+  
+
 }
-
-

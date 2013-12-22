@@ -1,9 +1,59 @@
+import jinja2
 import ofctl
 
+DOT_TEMPLATE = """
+digraph G
+{
+  rankdir=LR;
+  {% for table in tables %}
+  table{{ table.number }}
+  [
+
+      shape = none
+      label = <<table border="0" cellspacing="0">
+           <tr><td port="header" border="1" colspan="6"
+                 bgcolor="red">TABLE {{ table.number }}</td>
+           </tr>
+           <tr>
+              <td border="1">in</td>
+              <td border="1">packets</td>
+              <td border="1">bytes</td>
+              <td border="1">idle</td>
+              <td border="1">actions</td>
+              <td border="1">outputs</td>
+           </tr>
+
+           {% for row in table.rows %}
+           <tr>
+              <td border="1">{{ row.in_port  }}</td>
+              <td border="1">{{ row.n_packets }}</td>
+              <td border="1">{{ row.n_bytes  }}</td>
+              <td border="1">{{ row.idle_age }}</td>
+              <td border="1">{{ row.actions  }}</td>
+              <td port="rule{{ row.rule_id }}" border="1">{{ row.outputs }}</td>
+           </tr>
+           {% endfor %}
+          </table>>
+  ]
+  {% endfor %}
+
+  {% for connection in connections %}
+        table{{ connection.src_table }}:rule{{ connection.src_rule }} -> table{{ connection.dst_table }}:header [{{connection.parameters}}]
+  {% endfor %}
+
+}
+"""
+
 class OFCTLRulesToDOT:
+
     def __init__(self,rules):
 
+        self.template = jinja2.Template(DOT_TEMPLATE)
         self.tables = {}
+        self.add_rules(rules)
+
+
+    def add_rules(self, rules):
 
         for rule in rules:
             table_number = int(rule['data']['table'])
@@ -12,58 +62,78 @@ class OFCTLRulesToDOT:
             else:
                 self.tables[table_number] = [rule]
 
-        self.outputs = {} # outputs will be discovered on the fly
-
-    def get_dot(self):
-        return self.render()
 
     def render(self):
-        self._dot = ""
-        self.add_header()
+
+        template_data = self.build_template_data()
+        return self.template.render(template_data)
+
+
+    def build_template_data(self):
+
+        tables = []
+        connections = []
 
         for table_nr,rules in self.tables.items():
-            self.add_table(table_nr,rules)
+            tables.append(self.build_table_data(table_nr,rules))
 
         for table_nr,rules in self.tables.items():
-            self.add_connections(table_nr,rules)
+            connections +=  self.build_connections(table_nr,rules)
 
-        self.add_footer()
-        return self._dot
+        return {'tables': tables,
+                'connections':connections }
 
-    def add_header(self):
-        self.add("digraph G"
-                 "{"
-                 " rankdir = LR;")
+    def build_table_data(self,table_nr,rules):
 
-    def add_table(self,table_nr,rules):
-        self.add_table_header(table_nr)
-        rule_id = 0
-        for rule in rules:
-            self.add_table_rule(rule,rule_id)
-            rule_id += 1
+        rows = [ self.build_rule_data(rule) for rule in rules ]
+        return { 'number':table_nr, 'rows': rows}
 
-        self.add_table_footer(table_nr)
+    def build_rule_data(self,rule):
 
-    def add_table_header(self,table_nr):
-        self.add(" table%d"%table_nr)
-        self.add(" [")
-        self.add("  shape = none")
-        self.add('  label = <<table border="0" cellspacing="0">')
-        self.add('   <tr><td port="header" border="1" colspan="6" '
-                 'bgcolor="red">TABLE %d</td></tr>' % table_nr)
-        self.add('   <tr>')
-        self.add('    <td border="1">in</td>')
-        self.add('    <td border="1">packets</td>')
-        self.add('    <td border="1">bytes</td>')
-        self.add('    <td border="1">idle</td>')
-        self.add('    <td border="1">actions</td>')
-        self.add('    <td border="1">outputs</td>')
-        self.add('   </tr>')
+        data = {}
+        data['in_port'] = self.build_in_port_from_rule(rule)
+        data['outputs'] = self.build_outputs_from_rule(rule)
+        data['actions'] = self.build_actions_from_rule(rule)
+        data['n_packets'] = rule['data']['n_packets']
+        data['n_bytes'] = rule['data']['n_bytes']
+        data['idle_age'] = rule['data']['idle_age']
+        data['rule_id'] = rule['id']
 
-    def add_table_rule(self,rule,rule_id):
+        return data
+
+
+    def build_actions_from_rule(self,rule):
+
+        actions = []
+
+        for action in rule['actions']:
+            if type(action)==str:
+                actions.append(action)
+            if type(action)==dict:
+                action_name = action.keys()[0]
+                action_params = action[action_name]
+                if not action_name in ['output','resubmit','learn']:
+                    actions.append(action_name)
+
+        return ", ".join(actions)
+
+
+    def build_outputs_from_rule(self,rule):
+
+        outputs = []
+        for action in rule['actions']:
+            if type(action)==dict:
+                action_name = action.keys()[0]
+                action_params = action[action_name]
+                if action_name == "output":
+                    outputs.append(action_params)
+
+        return ", ".join(outputs)
+
+
+    def build_in_port_from_rule(self,rule):
+
         data = rule['data']
-        actions = rule['actions']
-
         in_port = ""
         if data.has_key('in_port'):
             in_port +="port:%s " % data['in_port']
@@ -76,73 +146,45 @@ class OFCTLRulesToDOT:
         if data.has_key('dl_vlan'):
             in_port +="vlan:0x%x " % int(data['dl_vlan'])
 
-
-        outputs_str = ""
-        action_str = ""
-        for action in actions:
-
-            if type(action)==str:
-                action_str += action+","
-            if type(action)==dict:
-                action_name = action.keys()[0]
-                action_params = action[action_name]
-                if action_name == "output":
-                    outputs_str += action_params +", "
-                elif not action_name in ['resubmit','learn']:
-                    action_str += action_name +", "
+        return in_port
 
 
+    def build_connections(self,table_nr,rules):
 
-        self.add('   <tr>')
-        self.add('    <td border="1">%s</td>' % in_port )
-        self.add('    <td border="1">%s</td>' % data['n_packets'])
-        self.add('    <td border="1">%s</td>' % data['n_bytes'])
-        self.add('    <td border="1">%s</td>' % data['idle_age'])
-        self.add('    <td border="1"> %s </td>'% action_str )
-        self.add('    <td port="rule%d" border="1"> %s </td>' %
-                 (rule_id, outputs_str))
-        self.add('   </tr>')
-
-    def add_table_footer(self,table_nr):
-        self.add('    </table>>')
-        self.add('  ]')
-
-
-    def add_connections(self,table_nr,rules):
-        rule_id = 0
+        connections = []
         for rule in rules:
-            self.add_table_connection(table_nr,rule,rule_id)
-            rule_id += 1
+            table_connections = self.build_table_connection(table_nr,rule)
+            connections += table_connections
 
-    def add_table_connection(self,table_nr,rule,rule_id):
-        #node1:port2 -> node2:port6 [label="language_id"]
-        data = rule['data']
-        actions = rule['actions']
-        for action in actions:
+        return connections
+
+
+    def build_table_connection(self,table_nr,rule):
+
+        connections = []
+
+        for action in rule['actions']:
             if type(action)==dict:
-                table_rule_str = "table%d:rule%d" %(table_nr,rule_id)
+                connection = {}
+                connection['src_table']=table_nr
+                connection['src_rule']=rule['id']
+
                 for function,params in action.items():
                     if function=="resubmit":
-                        self.add(table_rule_str +
-                                 ' -> table%s:header [arrowType="vee"]' %
-                                 params)
+                        connection['dst_table']=params
+                        connection['parameters']='arrowType="vee"'
+                        connections.append(connection)
                     if function=="learn":
                         params = params.split(',')
-                        table_param = params[0].split('=')[1]
-                        self.add(table_rule_str +
-                                 ' -> table%s:header [label="learn"]' %
-                                 table_param)
+                        table_param = params[0].split('=')[1] # table=xx
+                        connection['dst_table']=table_param
+                        connection['parameters']='label="learn"'
+                        connections.append(connection)
                     # add connection of outputs to output nodes, it's a mess
                     #if function=="output":
                     #    self.add(table_rule_str +
                     #             ' -> output%s' % params)
-
-    def add_footer(self):
-        self.add("}\n")
-
-    def add(self,content):
-        self._dot += content +"\n"
-
+        return connections
 
 class OFCTLDumpToDOT:
     def __init__(self,raw_tables):
