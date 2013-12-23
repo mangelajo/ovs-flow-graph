@@ -51,65 +51,65 @@ class OFCTLActionsParser:
 
     def parse(self):
         actions = []
-        while self.look_ahead():
-            actions.append(self.get_action())
+        while self._look_ahead():
+            actions.append(self._get_action())
         return actions
 
-    def get_action(self):
+    def _get_action(self):
 
         # first we have a function name, or k from  k:v pair
-        name = self.get_token_STR()
+        name = self._get_token_STR()
 
         # it was a k:v pair
-        if self.look_ahead() == ':':
-            self.get_char()
-            value = self.get_token_STR()
-            self.get_char()
+        if self._look_ahead() == ':':
+            self._get_char()
+            value = self._get_token_STR()
+            self._get_char()
             return {name:value}
 
         # it was a function call
-        if self.look_ahead() == '(':
-            self.get_char()
-            parameters = self.get_token_PARAMS().strip(',')
-            self.get_char()
+        if self._look_ahead() == '(':
+            self._get_char()
+            parameters = self._get_token_PARAMS().strip(',')
+            self._get_char()
             return {name:parameters}
 
         # it's a ',' or anything else... we clear it out
-        self.get_char()
+        self._get_char()
         return name
 
 
-    def get_token_STR(self):
+    def _get_token_STR(self):
 
         name = ""
-        while not self.look_ahead() in [':','(',',',None]:
-            name += self.get_char()
+        while not self._look_ahead() in [':','(',',',None]:
+            name += self._get_char()
         return name
 
 
-    def get_token_PARAMS(self):
+    def _get_token_PARAMS(self):
         name = ""
-        while not self.look_ahead() in [')',None]:
-            name += self.get_char()
+        while not self._look_ahead() in [')',None]:
+            name += self._get_char()
 
         return name
 
 
-    def get_char(self):
-        if self.data_left():
+    def _get_char(self):
+        if self._data_left():
             char = self.data[0]
             self.data = self.data[1:]
             return char
         else:
             return None
 
-    def look_ahead(self):
-        if self.data_left():
+    def _look_ahead(self):
+        if self._data_left():
             return self.data[0]
         else:
             return None
 
-    def data_left(self):
+    def _data_left(self):
         return len(self.data)>0
 
 

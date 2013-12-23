@@ -980,93 +980,137 @@ digraph G
   
 
   
-        table0:rule0 -> table2:header [arrowType="vee"]
+        table0:rule0 ->
+           table2:header [arrowType="vee"]
   
-        table0:rule1 -> table2:header [arrowType="vee"]
+        table0:rule1 ->
+           table2:header [arrowType="vee"]
   
-        table0:rule2 -> table2:header [arrowType="vee"]
+        table0:rule2 ->
+           table2:header [arrowType="vee"]
   
-        table0:rule3 -> table1:header [arrowType="vee"]
+        table0:rule3 ->
+           table1:header [arrowType="vee"]
   
-        table0:rule4 -> table2:header [arrowType="vee"]
+        table0:rule4 ->
+           table2:header [arrowType="vee"]
   
-        table0:rule5 -> table2:header [arrowType="vee"]
+        table0:rule5 ->
+           table2:header [arrowType="vee"]
   
-        table0:rule6 -> table2:header [arrowType="vee"]
+        table0:rule6 ->
+           table2:header [arrowType="vee"]
   
-        table0:rule7 -> table2:header [arrowType="vee"]
+        table0:rule7 ->
+           table2:header [arrowType="vee"]
   
-        table0:rule8 -> table2:header [arrowType="vee"]
+        table0:rule8 ->
+           table2:header [arrowType="vee"]
   
-        table0:rule9 -> table2:header [arrowType="vee"]
+        table0:rule9 ->
+           table2:header [arrowType="vee"]
   
-        table1:rule11 -> table20:header [arrowType="vee"]
+        table1:rule11 ->
+           table20:header [arrowType="vee"]
   
-        table1:rule12 -> table21:header [arrowType="vee"]
+        table1:rule12 ->
+           table21:header [arrowType="vee"]
   
-        table2:rule13 -> table10:header [arrowType="vee"]
+        table2:rule13 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule14 -> table10:header [arrowType="vee"]
+        table2:rule14 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule15 -> table10:header [arrowType="vee"]
+        table2:rule15 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule16 -> table10:header [arrowType="vee"]
+        table2:rule16 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule17 -> table10:header [arrowType="vee"]
+        table2:rule17 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule18 -> table10:header [arrowType="vee"]
+        table2:rule18 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule19 -> table10:header [arrowType="vee"]
+        table2:rule19 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule20 -> table10:header [arrowType="vee"]
+        table2:rule20 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule21 -> table10:header [arrowType="vee"]
+        table2:rule21 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule22 -> table10:header [arrowType="vee"]
+        table2:rule22 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule23 -> table10:header [arrowType="vee"]
+        table2:rule23 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule24 -> table10:header [arrowType="vee"]
+        table2:rule24 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule25 -> table10:header [arrowType="vee"]
+        table2:rule25 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule26 -> table10:header [arrowType="vee"]
+        table2:rule26 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule27 -> table10:header [arrowType="vee"]
+        table2:rule27 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule28 -> table10:header [arrowType="vee"]
+        table2:rule28 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule29 -> table10:header [arrowType="vee"]
+        table2:rule29 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule30 -> table10:header [arrowType="vee"]
+        table2:rule30 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule31 -> table10:header [arrowType="vee"]
+        table2:rule31 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule32 -> table10:header [arrowType="vee"]
+        table2:rule32 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule33 -> table10:header [arrowType="vee"]
+        table2:rule33 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule34 -> table10:header [arrowType="vee"]
+        table2:rule34 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule35 -> table10:header [arrowType="vee"]
+        table2:rule35 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule36 -> table10:header [arrowType="vee"]
+        table2:rule36 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule37 -> table10:header [arrowType="vee"]
+        table2:rule37 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule38 -> table10:header [arrowType="vee"]
+        table2:rule38 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule39 -> table10:header [arrowType="vee"]
+        table2:rule39 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule40 -> table10:header [arrowType="vee"]
+        table2:rule40 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule41 -> table10:header [arrowType="vee"]
+        table2:rule41 ->
+           table10:header [arrowType="vee"]
   
-        table2:rule42 -> table10:header [arrowType="vee"]
+        table2:rule42 ->
+           table10:header [arrowType="vee"]
   
-        table10:rule45 -> table20:header [label="learn"]
+        table10:rule45 ->
+           table20:header [label="learn"]
   
-        table20:rule60 -> table21:header [arrowType="vee"]
+        table20:rule60 ->
+           table21:header [arrowType="vee"]
   
 
 }

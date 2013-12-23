@@ -38,7 +38,8 @@ digraph G
   {% endfor %}
 
   {% for connection in connections %}
-        table{{ connection.src_table }}:rule{{ connection.src_rule }} -> table{{ connection.dst_table }}:header [{{connection.parameters}}]
+        table{{ connection.src_table }}:rule{{ connection.src_rule }} ->
+           table{{ connection.dst_table }}:header [{{connection.parameters}}]
   {% endfor %}
 
 }
@@ -50,10 +51,15 @@ class OFCTLRulesToDOT:
 
         self.template = jinja2.Template(DOT_TEMPLATE)
         self.tables = {}
-        self.add_rules(rules)
+        self._add_rules(rules)
+
+    def render(self):
+
+        template_data = self._build_template_data()
+        return self.template.render(template_data)
 
 
-    def add_rules(self, rules):
+    def _add_rules(self, rules):
 
         for rule in rules:
             table_number = int(rule['data']['table'])
@@ -63,37 +69,31 @@ class OFCTLRulesToDOT:
                 self.tables[table_number] = [rule]
 
 
-    def render(self):
-
-        template_data = self.build_template_data()
-        return self.template.render(template_data)
-
-
-    def build_template_data(self):
+    def _build_template_data(self):
 
         tables = []
         connections = []
 
         for table_nr,rules in self.tables.items():
-            tables.append(self.build_table_data(table_nr,rules))
+            tables.append(self._build_table_data(table_nr,rules))
 
         for table_nr,rules in self.tables.items():
-            connections +=  self.build_connections(table_nr,rules)
+            connections +=  self._build_connections(table_nr,rules)
 
         return {'tables': tables,
                 'connections':connections }
 
-    def build_table_data(self,table_nr,rules):
+    def _build_table_data(self,table_nr,rules):
 
-        rows = [ self.build_rule_data(rule) for rule in rules ]
+        rows = [ self._build_rule_data(rule) for rule in rules ]
         return { 'number':table_nr, 'rows': rows}
 
-    def build_rule_data(self,rule):
+    def _build_rule_data(self,rule):
 
         data = {}
-        data['in_port'] = self.build_in_port_from_rule(rule)
-        data['outputs'] = self.build_outputs_from_rule(rule)
-        data['actions'] = self.build_actions_from_rule(rule)
+        data['in_port'] = self._build_in_port_from_rule(rule)
+        data['outputs'] = self._build_outputs_from_rule(rule)
+        data['actions'] = self._build_actions_from_rule(rule)
         data['n_packets'] = rule['data']['n_packets']
         data['n_bytes'] = rule['data']['n_bytes']
         data['idle_age'] = rule['data']['idle_age']
@@ -102,7 +102,7 @@ class OFCTLRulesToDOT:
         return data
 
 
-    def build_actions_from_rule(self,rule):
+    def _build_actions_from_rule(self,rule):
 
         actions = []
 
@@ -118,7 +118,7 @@ class OFCTLRulesToDOT:
         return ", ".join(actions)
 
 
-    def build_outputs_from_rule(self,rule):
+    def _build_outputs_from_rule(self,rule):
 
         outputs = []
         for action in rule['actions']:
@@ -131,7 +131,7 @@ class OFCTLRulesToDOT:
         return ", ".join(outputs)
 
 
-    def build_in_port_from_rule(self,rule):
+    def _build_in_port_from_rule(self,rule):
 
         data = rule['data']
         in_port = ""
@@ -149,17 +149,17 @@ class OFCTLRulesToDOT:
         return in_port
 
 
-    def build_connections(self,table_nr,rules):
+    def _build_connections(self,table_nr,rules):
 
         connections = []
         for rule in rules:
-            table_connections = self.build_table_connection(table_nr,rule)
+            table_connections = self._build_table_connection(table_nr,rule)
             connections += table_connections
 
         return connections
 
 
-    def build_table_connection(self,table_nr,rule):
+    def _build_table_connection(self,table_nr,rule):
 
         connections = []
 
