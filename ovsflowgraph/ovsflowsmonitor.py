@@ -9,6 +9,7 @@ from twisted.web.server import Site
 from twisted.web.resource import Resource
 from twisted.internet import reactor
 import ovsflowgraph
+import sys
 
 class BridgeMonitor(Resource):
 
@@ -51,8 +52,22 @@ class BridgeMonitor(Resource):
 class BridgeGraph(Resource):
     isLeaf = False
 
+    def __init__(self):
+        self.setFormat('png')
+        Resource.__init__(self)
+
     def getChild(self, name, request):
        return self
+
+    def setFormat(self, image_format):
+        self._image_format = image_format
+        if image_format == 'png':
+            self._content_type = 'image/png'
+        elif image_format == 'svg':
+            self._content_type = 'image/svg+xml'
+        else:
+            self.setFormat('png')
+
 
     def render_GET(self, request):
         tunnel = None
@@ -60,8 +75,8 @@ class BridgeGraph(Resource):
             tunnel = request.prepath[1]
 
         if tunnel:
-            request.setHeader('Content-Type', 'image/svg+xml')
-            return ovsflowgraph.dump_bridge_flows(tunnel)
+            request.setHeader('Content-Type', self._content_type)
+            return ovsflowgraph.dump_bridge_flows(tunnel,self._image_format)
         else:
             return "No tunnel specified"
 
@@ -75,13 +90,27 @@ class Index(Resource):
     def render_GET(self, request):
         return "<html>Hello, world! %r</html>" %(request.prepath)
 
-index = Index()
-bridge_graph = BridgeGraph()
-bridge_monitor = BridgeMonitor()
-index.putChild("bridge-graph",bridge_graph)
-index.putChild("bridge-monitor",bridge_monitor)
 
-site = Site(index)
 
-reactor.listenTCP(8686, site)
-reactor.run()
+def main():
+
+    index = Index()
+    bridge_graph = BridgeGraph()
+    bridge_monitor = BridgeMonitor()
+    index.putChild("bridge-graph",bridge_graph)
+    index.putChild("bridge-monitor",bridge_monitor)
+    site = Site(index)
+
+    image_format = 'png'
+
+    if len(sys.argv)>1:
+        image_format = sys.argv[1]
+
+    bridge_graph.setFormat(image_format)
+
+    reactor.listenTCP(8686, site)
+    reactor.run()
+
+
+if __name__ == "__main__":
+    main()

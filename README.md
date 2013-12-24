@@ -18,4 +18,7 @@ would be interesting:
 * Get port information and include it into the graph
 
 
+Installing in rhel/CentOS
+-------------------------
 
+yum install graphviz python-twisted python-jinja2 python-unittest2

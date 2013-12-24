@@ -214,7 +214,7 @@ class OFCTLDumpToDOT:
         return self.rules_to_dot.render()
 
 
-def dump_bridge_flows(bridge):
+def dump_bridge_flows(bridge,format='svg'):
 
 
     if bridge=="test":
@@ -228,7 +228,7 @@ def dump_bridge_flows(bridge):
 
     dot = rules_to_dot_renderer.render()
 
-    process = subprocess.Popen(['dot','-Tsvg'],
+    process = subprocess.Popen(['dot','-T%s'%format],
                                stdout = subprocess.PIPE,
                                stderr = subprocess.PIPE,
                                stdin  = subprocess.PIPE)
