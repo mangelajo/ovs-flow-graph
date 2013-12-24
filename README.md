@@ -9,15 +9,13 @@ TO-DO
 If the project proves to be useful/interesting, several refactors
 would be interesting:
 
-[ ] order rows by bytes and idle time
-
-[ ] Make a better parser for ofctl-dump or get the table entries ourselves
-    (no parsing) At this moment it's a dirty LL(1) grammar on the actions part,
+* Make a better parser for ofctl-dump or get the table entries ourselves
+  (no parsing) At this moment it's a dirty LL(1) grammar on the actions part,
     and string splitting  before that.
 
-[x] Refactor dot generation as Model/View
+* Add a label with interface details, timestamp, server, etc...
 
-[x] Tiny twisted based server, to allow connection via http for watching
-    live rules.
+* Get port information and include it into the graph
+
 
 

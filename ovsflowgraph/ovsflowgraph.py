@@ -96,10 +96,14 @@ class OFCTLRulesToDOT:
         return {'tables': tables,
                 'connections':connections }
 
+    def _row_sort_key(self,row):
+        return int(row['idle_age'])
+
     def _build_table_data(self,table_nr,rules):
 
         rows = [ self._build_rule_data(rule) for rule in rules ]
-        return { 'number':table_nr, 'rows': rows}
+
+        return { 'number':table_nr, 'rows': sorted(rows,key=self._row_sort_key)}
 
     def _build_rule_data(self,rule):
 
@@ -175,6 +179,10 @@ class OFCTLRulesToDOT:
     def _build_table_connection(self,table_nr,rule):
 
         connections = []
+        connection_style = 'color="#555555"'
+
+        if int(rule['data']['idle_age'])==0:
+            connection_style = 'color="red" penwidth="2"'
 
         for action in rule['actions']:
             if type(action)==dict:
@@ -184,14 +192,16 @@ class OFCTLRulesToDOT:
 
                 for function,params in action.items():
                     if function=="resubmit":
-                        connection['dst_table']=params
-                        connection['parameters']='arrowType="vee"'
+                        connection['dst_table'] = params
+                        connection['parameters'] = 'arrowType="vee"'
+                        connection['parameters'] += ' '+connection_style
                         connections.append(connection)
                     if function=="learn":
                         params = params.split(',')
                         table_param = params[0].split('=')[1] # table=xx
                         connection['dst_table']=table_param
                         connection['parameters']='label="learn"'
+                        connection['parameters'] += ' '+connection_style
                         connections.append(connection)
         return connections
 
