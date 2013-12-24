@@ -53,7 +53,7 @@ class BridgeGraph(Resource):
     isLeaf = False
 
     def __init__(self):
-        self.setFormat('png')
+        self.setFormat('gif')
         Resource.__init__(self)
 
     def getChild(self, name, request):
@@ -65,6 +65,8 @@ class BridgeGraph(Resource):
             self._content_type = 'image/png'
         elif image_format == 'svg':
             self._content_type = 'image/svg+xml'
+        elif image_format in ['jpg','jpeg']:
+            self._content_type = 'image/jpeg'
         else:
             self.setFormat('png')
 
@@ -101,7 +103,7 @@ def main():
     index.putChild("bridge-monitor",bridge_monitor)
     site = Site(index)
 
-    image_format = 'png'
+    image_format = 'jpg'
 
     if len(sys.argv)>1:
         image_format = sys.argv[1]
