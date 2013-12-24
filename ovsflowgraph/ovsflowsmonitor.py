@@ -14,37 +14,39 @@ import sys
 class BridgeMonitor(Resource):
 
     BRIDGE_MONITOR_HTML = """
-                    <html>
-                        <head>
-                        </head>
-                        <body>
-                            <img id="dynamicGraph" src="/bridge-graph/test"/>
+        <html>
+            <head>
+            </head>
+            <body>
+                <img id="dynamicGraph" src="/bridge-graph/%(bridge)s"/>
+                <script>
+                    window.setInterval(function()
+                    {
+                       document.getElementById('dynamicGraph').src =
+                        "/bridge-graph/%(bridge)s?random="+new Date().getTime();
+                    }, %(reload_ms)d);
+                    </script>
+            </body>
+        </html>
+        """
 
-                            <script>
-                            window.setInterval(function()
-                            {
-                                document.getElementById('dynamicGraph').src =
-                                "/bridge-graph/%s?random="+new Date().getTime();
-                            }, %d);
-                            </script>
-                        </body>
-                    </html>
-                    """
+
     isLeaf = False
 
     def getChild(self, name, request):
        return self
 
     def render_GET(self, request):
-        tunnel = None
+        bridge = None
         reload_ms = 2000
         if len(request.prepath)>1:
-            tunnel = request.prepath[1]
+            bridge = request.prepath[1]
         if len(request.prepath)>2:
             reload_ms = int(request.prepath[2])*1000
 
-        if tunnel:
-            return self.BRIDGE_MONITOR_HTML % (tunnel,reload_ms)
+        if bridge:
+            return self.BRIDGE_MONITOR_HTML % {'bridge':bridge,
+                                               'reload_ms':reload_ms}
         else:
             return "No tunnel specified"
 
