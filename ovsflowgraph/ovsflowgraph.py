@@ -10,7 +10,8 @@ import subprocess
 
 import jinja2
 
-from ovsflowgraph import ofctl
+import ofctl
+import test
 
 
 DOT_TEMPLATE = """
@@ -205,15 +206,32 @@ class OFCTLDumpToDOT:
 
 def dump_bridge_flows(bridge):
 
-    rules = ofctl.dump_bridge_flows(bridge)
+
+    if bridge=="test":
+        file = open(test.TestCase.get_data_path("ovs-ofctl-dump-out.txt"),'r')
+        rules = ofctl.parse(file.read())
+        file.close()
+    else:
+        rules = ofctl.dump_bridge_flows(bridge)
+
     rules_to_dot_renderer = OFCTLRulesToDOT(rules)
 
     dot = rules_to_dot_renderer.render()
 
-    proc = subprocess.Popen(['dot','-Tsvg'])
-    proc.stdin.write(dot)
-    out, err = proc.communicate()
-    proc.stdin.close()
+    process = subprocess.Popen(['dot','-Tsvg'],
+                               stdout = subprocess.PIPE,
+                               stderr = subprocess.PIPE,
+                               stdin  = subprocess.PIPE)
+
+    process.stdin.write(dot)
+    out, err = process.communicate()
+    process.stdin.close()
+
+    return_code = process.wait()
+
+    if return_code!=0:
+        print "ERROR:",err
+        return None
 
     return out
 

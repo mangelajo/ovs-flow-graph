@@ -14,5 +14,6 @@ else:
     import unittest
 
 class TestCase(unittest.TestCase):
-    def get_data_path(self,file_path):
+    @staticmethod
+    def get_data_path(file_path):
         return os.path.join(os.path.dirname(__file__),'data',file_path)

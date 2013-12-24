@@ -127,7 +127,15 @@ def parse(data):
 
 def dump_bridge_flows(bridge):
     process = subprocess.Popen(['ovs-ofctl','dump-flows',bridge],
-                               stdout = subprocess.PIPE)
+                               stdout = subprocess.PIPE,
+                               stderr = subprocess.PIPE )
 
     out, err = process.communicate()
+
+    return_code = process.wait()
+
+    if return_code!=0:
+        print "ERROR:",err
+        return None
+
     return parse(out)

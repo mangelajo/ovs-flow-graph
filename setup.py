@@ -16,7 +16,7 @@ setuptools.setup(
             'console_scripts': [
                 'ovsflowgraph = ovsflowgraph.cmdline:main'
             ]},
-        install_requires = ['jinja2','unittest2'],
+        install_requires = ['jinja2','unittest2','twisted'],
         data_files = [],
         test_suite = 'ovsflowgraph.test.testcases'
         )
