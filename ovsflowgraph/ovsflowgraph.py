@@ -1,5 +1,17 @@
+# -*- mode: python; coding: utf-8 -*-
+
+__author__ = "Miguel Angel Ajo Pelayo"
+__email__ = "miguelangel@ajo.es"
+__copyright__ = "Copyright (C) 2013 Miguel Angel Ajo Pelayo"
+__license__ = "GPLv3"
+
+
+import subprocess
+
 import jinja2
-import ofctl
+
+from ovsflowgraph import ofctl
+
 
 DOT_TEMPLATE = """
 digraph G
@@ -180,10 +192,6 @@ class OFCTLRulesToDOT:
                         connection['dst_table']=table_param
                         connection['parameters']='label="learn"'
                         connections.append(connection)
-                    # add connection of outputs to output nodes, it's a mess
-                    #if function=="output":
-                    #    self.add(table_rule_str +
-                    #             ' -> output%s' % params)
         return connections
 
 class OFCTLDumpToDOT:
@@ -195,9 +203,23 @@ class OFCTLDumpToDOT:
         return self.rules_to_dot.render()
 
 
+def dump_bridge_flows(bridge):
+
+    rules = ofctl.dump_bridge_flows(bridge)
+    rules_to_dot_renderer = OFCTLRulesToDOT(rules)
+
+    dot = rules_to_dot_renderer.render()
+
+    proc = subprocess.Popen(['dot','-Tsvg'])
+    proc.stdin.write(dot)
+    out, err = proc.communicate()
+    proc.stdin.close()
+
+    return out
+
 
 def main():
-    with open("test-data/ovs-ofctl-dump-out.txt",'r') as file:
+    with open("data/../data/ovs-ofctl-dump-out.txt",'r') as file:
 
         ofctl_dot = OFCTLDumpToDOT(file.read())
 

@@ -1,4 +1,12 @@
-import re
+# -*- mode: python; coding: utf-8 -*-
+
+__author__ = "Miguel Angel Ajo Pelayo"
+__email__ = "miguelangel@ajo.es"
+__copyright__ = "Copyright (C) 2013 Miguel Angel Ajo Pelayo"
+__license__ = "GPLv3"
+
+
+import subprocess
 
 
 class OFCTLDumpFlowParser:
@@ -117,3 +125,9 @@ def parse(data):
     parser = OFCTLDumpFlowParser(data)
     return parser.parse()
 
+def dump_bridge_flows(bridge):
+    process = subprocess.Popen(['ovs-ofctl','dump-flows',bridge],
+                               stdout = subprocess.PIPE)
+
+    out, err = process.communicate()
+    return parse(out)
